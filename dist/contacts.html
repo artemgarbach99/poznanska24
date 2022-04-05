@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220403132638">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220405182520">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +17,15 @@
 		<div class="cursor-fade"></div>
 	</div>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll data-scroll-show="300" class="header">
 			<div class="header__container">
 				<div class="header__body">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<a href="/poznanska.html" class="header__logo">Poznańska 24</a>
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="/obrazy.html" class="menu__link">obrazy</a></li>
+								<li class="menu__item"><a href="/obrazy.html" class="menu__link current-page">obrazy</a></li>
 								<li class="menu__item"><a href="" class="menu__link">artyści</a></li>
 								<li class="menu__item"><a href="" class="menu__link">jak kupić</a></li>
 								<li class="menu__item"><a href="/lectures.html" class="menu__link">wykłady o sztuce</a></li>
@@ -34,27 +35,31 @@
 								<li class="menu__item"><a href="/contacts.html" class="menu__link">kontakt</a></li>
 							</ul>
 						</nav>
-						<div class="header__links">
-							<div class="header__item">
-								<div id="header__arrow" class="header__arrow">
-									<img data-src="img/header/language.svg" alt="image">
-									<span>PL</span>
-								</div>
-								<div id="header__dropdown" class="header__dropdown">
-									<a href="#">UA</a>
-									<a href="#">FR</a>
-									<a href="#">ES</a>
-									<a href="#">PL</a>
-								</div>
-							</div>
-							<!-- <a href="" class="header__link">
-						<img data-src="img/header/language.svg" alt="image">
-						<span>PL</span>
-					</a> -->
-							<a href="" class="header__link _icon-bag"></a>
-						</div>
 					</div>
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<div class="header__links">
+						<!-- <div class="header__item-mob">
+					<span>PL</span>
+					<a href="#">EN</a>
+					<a href="#">DE</a>
+					<a href="#">FR</a>
+				</div> -->
+						<div class="header__item">
+							<div id="header__arrow" class="header__arrow">
+								<img data-src="img/header/language.svg" alt="image">
+								<span>PL</span>
+							</div>
+							<div id="header__dropdown" class="header__dropdown">
+								<a href="#">EN</a>
+								<a href="#">DE</a>
+								<a href="#">FR</a>
+							</div>
+						</div>
+						<!-- <a href="" class="header__link">
+					<img data-src="img/header/language.svg" alt="image">
+					<span>PL</span>
+				</a> -->
+						<a href="" class="header__link _icon-bag"></a>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -90,8 +95,8 @@
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__body">
-					<div class="footer__link">
-						design & development - <a href="">mico creative agency</a>
+					<div data-da=".footer__link-mob, 768" class="footer__link-inner">
+						<span>design & development - </span><a href="" class="footer__link">mico creative agency</a>
 					</div>
 					<div class="footer__social">
 						<ul class="footer__list">
@@ -102,6 +107,7 @@
 							<li class="footer__item"><a href="">polityka prywatności</a></li>
 							<li class="footer__item"><a href="">warunki użytkowania</a></li>
 						</ul>
+						<span class="footer__link-mob"></span>
 						<span class="footer__copy">© 2022 Poznańska 24</span>
 					</div>
 				</div>
@@ -112,15 +118,13 @@
 		<div class="preloader-top"></div>
 		<div class="preloader-bottom"></div>
 		<div id="preloader-inside">
-			<p>w</p>
-			<p>a</p>
-			<p>r</p>
-			<p>s</p>
-			<p>z</p>
+			<p>k</p>
+			<p>o</p>
+			<p>n</p>
 			<p>t</p>
 			<p>a</p>
+			<p>c</p>
 			<p>t</p>
-			<p>y</p>
 		</div>
 		<div id="preloader-line"></div>
 	</div>
@@ -136,7 +140,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220403132638"></script>
+	<script src="js/app.min.js?_v=20220405182520"></script>
 </body>
 
 </html>
