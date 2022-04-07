@@ -1379,9 +1379,9 @@ textarea.input {
 }
 
 .header._header-show {
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: top 1.5s ease 0s;
+  -o-transition: top 1.5s ease 0s;
+  transition: top 1.5s ease 0s;
   top: 0;
 }
 
@@ -1492,10 +1492,12 @@ textarea.input {
 }
 
 .header__dropdown {
-  -webkit-transform: translate(1000%, 0px);
-      -ms-transform: translate(1000%, 0px);
-          transform: translate(1000%, 0px);
-  display: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(50%, 0px);
+      -ms-transform: translate(50%, 0px);
+          transform: translate(50%, 0px);
 }
 
 .header__dropdown a {
@@ -1510,12 +1512,14 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
   gap: 0.78125vw;
   min-width: auto;
   padding: 0.9375vw 0.2604166667vw;
@@ -1523,6 +1527,9 @@ textarea.input {
   top: 0.3125vw;
   right: 1.8229166667vw;
   z-index: 5;
+  -webkit-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .menu {
@@ -3270,6 +3277,7 @@ textarea.input {
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-color: #eeecea;
+  z-index: 10;
   padding: 0.2604166667vw 0px 0px 0px;
 }
 
@@ -4097,9 +4105,12 @@ button {
   }
 
   .header__dropdown {
-    -webkit-transform: translate(0px, 1000%);
-        -ms-transform: translate(0px, 1000%);
-            transform: translate(0px, 1000%);
+    -webkit-transform: translate(0px, -50%);
+        -ms-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
   }
 
   .header__dropdown a {
@@ -4120,6 +4131,8 @@ button {
     margin-right: 0px 0vw 0px 0px;
     top: 7.6923076923vw;
     right: -0.2564102564vw;
+    opacity: 1;
+    visibility: visible;
   }
 
   .menu {
