@@ -6756,7 +6756,7 @@
                 observeParents: true,
                 slidesPerView: "auto",
                 spaceBetween: 70,
-                speed: 5e3,
+                speed: 9e3,
                 freeMode: true,
                 simulateTouch: false,
                 allowTouchMove: false,
@@ -6802,21 +6802,17 @@
                     modules: [ Navigation, Thumb ],
                     observer: true,
                     observeParents: true,
-                    direction: "vertical",
+                    direction: "horizontal",
                     slidesPerView: 1,
-                    spaceBetween: 30,
+                    spaceBetween: 40,
                     speed: 800,
                     loop: true,
                     thumbs: {
                         swiper: thumbsSwiper
                     },
-                    breakpoints: {
-                        320: {
-                            direction: "horizontal"
-                        },
-                        768: {
-                            direction: "vertical"
-                        }
+                    navigation: {
+                        prevEl: ".swiper-button-prev",
+                        nextEl: ".swiper-button-next"
                     }
                 });
             }
@@ -6831,32 +6827,6 @@
             use_native: true
         });
         let addWindowScrollEvent = false;
-        function headerScroll() {
-            addWindowScrollEvent = true;
-            const header = document.querySelector("header.header");
-            const headerShow = header.hasAttribute("data-scroll-show");
-            const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
-            const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
-            let scrollDirection = 0;
-            let timer;
-            document.addEventListener("windowScroll", (function(e) {
-                const scrollTop = window.scrollY;
-                clearTimeout(timer);
-                if (scrollTop >= startPoint) {
-                    !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
-                    if (headerShow) {
-                        if (scrollTop > scrollDirection) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null; else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
-                        timer = setTimeout((() => {
-                            !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
-                        }), headerShowTimer);
-                    }
-                } else {
-                    header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
-                    if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
-                }
-                scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
-            }));
-        }
         function stickyBlock() {
             addWindowScrollEvent = true;
             function stickyBlockInit() {
@@ -7079,6 +7049,20 @@
                 cursor.classList.remove("hidden");
             }));
         }));
+        const header = document.querySelector(".header");
+        const headerHeight = header.offsetHeight;
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", (() => {
+            let scrollDistance = window.scrollY;
+            if (scrollDistance >= headerHeight) header.classList.add("header-slide"); else header.classList.remove("header-slide");
+            if (scrollDistance > lastScrollTop) header.classList.remove("header-fixed"); else header.classList.add("header-fixed");
+            if (0 === scrollDistance) header.classList.remove("header-fixed");
+            if (window.innerWidth < 768) {
+                header.classList.remove("header-fixed");
+                header.classList.remove("header-slide");
+            }
+            lastScrollTop = scrollDistance;
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();
@@ -7088,7 +7072,6 @@
             viewPass: false
         });
         formSubmit();
-        headerScroll();
         stickyBlock();
     })();
 })();
