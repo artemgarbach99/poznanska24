@@ -2584,10 +2584,9 @@ textarea.input {
 }
 
 .no-webp .news-main{
-  background: url("../img/news/bg.png") left no-repeat; }
+  background: url("../img/news/bg.png") right/cover no-repeat; }
 
 .news-main {
-  background-size: cover;
   padding: 5.1041666667vw 0px;
 }
 
@@ -3016,10 +3015,9 @@ textarea.input {
 }
 
 .no-webp .poznanska-sign-up__inner{
-  background: url("../img/poznanska/bgcover.png") 0 0 no-repeat; }
+  background: url("../img/poznanska/bgcover.png") center/cover no-repeat; }
 
 .poznanska-sign-up__inner {
-  background-size: cover;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4950,7 +4948,6 @@ button {
 
   .news-main {
     padding: 12.8205128205vw 0px;
-    background: none;
     background-color: #1a1818;
   }
 
@@ -5160,10 +5157,6 @@ button {
 
   .poznanska-sign-up__content {
     padding: 25.641025641vw 0px;
-  }
-
-  .poznanska-sign-up__inner {
-    background-position: center;
   }
 
   .poznanska-sign-up__inner-con {
@@ -5433,10 +5426,10 @@ button {
 
 .webp .lectures-main{ background: url(../img/lectures/bg.webp) left/cover no-repeat; }
 
-.webp .news-main{ background: url(../img/news/bg.webp) left no-repeat; }
+.webp .news-main{ background: url(../img/news/bg.webp) right/cover no-repeat; }
 
 .webp .poznanska-exhibition__bg{ background: url(../img/gallery/thumb.webp) 0 0/cover no-repeat; }
 
-.webp .poznanska-sign-up__inner{ background: url(../img/poznanska/bgcover.webp) 0 0 no-repeat; }
+.webp .poznanska-sign-up__inner{ background: url(../img/poznanska/bgcover.webp) center/cover no-repeat; }
 
 .webp .trambs-obrazy__bg{ background: url(../img/gallery/thumb.webp) 0 0/cover no-repeat; }
