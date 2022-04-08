@@ -1380,12 +1380,11 @@ textarea.input {
 
 .header.header-slide {
   position: fixed;
-  top: 0;
   left: 0;
+  top: -20%;
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
-  top: -20%;
 }
 
 .header.header-fixed {
@@ -1514,8 +1513,12 @@ textarea.input {
 }
 
 .header__dropdown a {
-  font-size: 1.0416666667vw;
-  line-height: 1.1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: "Canela";
+  font-size: 0.9895833333vw;
+  line-height: 1.3020833333vw;
   letter-spacing: 0.0104166667vw;
 }
 
@@ -2728,6 +2731,8 @@ textarea.input {
 .poznanska-main__image img {
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .poznanska-main__content {
@@ -4246,8 +4251,8 @@ button {
   }
 
   .header__dropdown a {
-    font-size: 5.1282051282vw;
-    line-height: 1.1;
+    font-size: 4.6153846154vw;
+    line-height: 5.641025641vw;
   }
 
   .header__dropdown.dropdown-open {
