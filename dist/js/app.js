@@ -7317,17 +7317,6 @@
             }
             lastScrollTop = scrollDistance;
         }));
-        const script_filter = document.querySelector(".filter-pictures-mobile");
-        const catalog = document.querySelector(".items-pictures");
-        const mainBlock = document.querySelector(".pictures-main");
-        const filterHeight = script_filter.offsetHeight;
-        const catalogHeight = catalog.offsetHeight;
-        const mainBlockHeight = mainBlock.offsetHeight;
-        window.addEventListener("scroll", (() => {
-            let scrollDistance = window.scrollY;
-            if (scrollDistance >= mainBlockHeight) script_filter.classList.add("filter-fixed"); else script_filter.classList.remove("filter-fixed");
-            if (scrollDistance >= catalogHeight + filterHeight) catalog.classList.add("filter-hide"); else catalog.classList.remove("filter-hide");
-        }));
         window["FLS"] = true;
         isWebp();
         menuInit();
