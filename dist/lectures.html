@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220411191034">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220411214653">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -242,12 +242,16 @@
 	<div id="popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
+				<!-- <button data-close type="button" class="popup__close"></button> -->
 				<div class="popup__text">
 					<div class="popup__filter">
-						<h4 class="popup__title h4">FILTRUJ WEDŁUG</h4>
-						<div data-spollers class="spollers__item">
-							<button type="button" data-spoller class="spollers__title _icon-arrow">Artyści</button>
+						<div class="popup__top">
+							<button data-close type="button" class="popup__close"></button>
+							<h4 class="popup__title h4">FILTRUJ</h4>
+							<button type="button" class="popup__clear">clear</button>
+						</div>
+						<div data-spollers class="spollers__item ">
+							<button type="button" data-spoller class="spollers__title _icon-arrow _spoller-active">Artyści</button>
 							<div class="spollers__body">
 								<div class="checkbox">
 									<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
@@ -272,7 +276,7 @@
 							</div>
 						</div>
 						<div data-spollers class="spollers__item">
-							<button type="button" data-spoller class="spollers__title _icon-arrow">Styl</button>
+							<button type="button" data-spoller class="spollers__title _icon-arrow _spoller-active">Styl</button>
 							<div class="spollers__body">
 								<div class="checkbox">
 									<input id="c_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
@@ -297,7 +301,7 @@
 							</div>
 						</div>
 						<div data-spollers class="spollers__item">
-							<button type="button" data-spoller class="spollers__title _icon-arrow">Cena</button>
+							<button type="button" data-spoller class="spollers__title _icon-arrow _spoller-active">Cena</button>
 							<div class="spollers__body">
 								<div class="options">
 									<div class="options__item">
@@ -325,6 +329,9 @@
 									</div>
 								</div>
 							</div>
+						</div>
+						<div class="popup__bottom">
+							<button type="submit" class="popup__results">Show results</button>
 						</div>
 					</div>
 					<!-- <div data-sticky-item class="popup__body">
@@ -424,7 +431,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220411191034"></script>
+	<script src="js/app.min.js?_v=20220411214653"></script>
 </body>
 
 </html>
