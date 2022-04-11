@@ -7320,7 +7320,7 @@
         const script_filter = document.querySelector(".filter-pictures-mobile");
         const catalog = document.querySelector(".items-pictures");
         const mainBlock = document.querySelector(".pictures-main");
-        const filterHeight = header.offsetHeight;
+        const filterHeight = script_filter.offsetHeight;
         const catalogHeight = catalog.offsetHeight;
         const mainBlockHeight = mainBlock.offsetHeight;
         window.addEventListener("scroll", (() => {
