@@ -7317,6 +7317,19 @@
             }
             lastScrollTop = scrollDistance;
         }));
+        window.addEventListener("scroll", (() => {
+            if (document.querySelector("body").classList.contains("filter-action")) {
+                const filter = document.querySelector(".filter-pictures-mobile");
+                const catalog = document.querySelector(".items-pictures");
+                const mainBlock = document.querySelector(".pictures-main");
+                const filterHeight = filter.offsetHeight;
+                const catalogHeight = catalog.offsetHeight;
+                const mainBlockHeight = mainBlock.offsetHeight;
+                let scrollDistance = window.scrollY;
+                if (scrollDistance >= mainBlockHeight) filter.classList.add("filter-fixed"); else filter.classList.remove("filter-fixed");
+                if (scrollDistance >= catalogHeight + filterHeight) catalog.classList.add("filter-hide"); else catalog.classList.remove("filter-hide");
+            }
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();
