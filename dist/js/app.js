@@ -7590,6 +7590,19 @@
                 if (scrollDistance >= catalogHeight + filterHeight) catalog.classList.add("filter-hide"); else catalog.classList.remove("filter-hide");
             }
         }));
+        window.addEventListener("scroll", (() => {
+            if (document.querySelector("body").classList.contains("filter-action")) {
+                const filterDesk = document.querySelector(".filter-pictures__body");
+                const catalogDesk = document.querySelector(".filter-pictures");
+                const mainBlockDesk = document.querySelector(".pictures-main");
+                filterDesk.offsetHeight;
+                const catalogDeskHeight = catalogDesk.offsetHeight;
+                const mainBlockDeskHeight = mainBlockDesk.offsetHeight;
+                let scrollDistance = window.scrollY;
+                if (scrollDistance >= mainBlockDeskHeight) filterDesk.classList.add("filter-fix"); else filterDesk.classList.remove("filter-fix");
+                if (scrollDistance >= catalogDeskHeight + 150) catalogDesk.classList.add("filter-hides"); else catalogDesk.classList.remove("filter-hides");
+            }
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();

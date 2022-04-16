@@ -130,6 +130,22 @@ h6 {
       touch-action: none;
 }
 
+body iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+body video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -648,6 +664,12 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .popup__bottom {
@@ -659,6 +681,7 @@ body::after {
   z-index: 5;
   background-color: #eeecea;
   border-top: 0.2564102564vw solid #cbcac8;
+  font-family: "Austin";
 }
 
 .popup__results {
@@ -670,6 +693,8 @@ body::after {
   padding: 3.0769230769vw 0vw;
   background-color: #202020;
   border-radius: 3.8461538462vw;
+  text-transform: uppercase;
+  font-family: "Austin";
 }
 
 .popup__clear {
@@ -680,6 +705,7 @@ body::after {
   padding: 1.7948717949vw 3.8461538462vw;
   background-color: #202020;
   border-radius: 3.8461538462vw;
+  text-transform: uppercase;
 }
 
 .popup__top {
@@ -696,7 +722,7 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 3.8461538462vw 3.8461538462vw;
+  padding: 3.8461538462vw 5.1282051282vw;
   z-index: 15;
   background-color: #eeecea;
   border-bottom: 0.2564102564vw solid #cbcac8;
@@ -3529,8 +3555,26 @@ body::after {
           flex: 0 0 18.59375vw;
 }
 
+.filter-pictures.filter-hides .filter-pictures__body {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 .filter-pictures__body {
   background-color: #eeecea;
+  height: 41.6666666667vw;
+  overflow-y: hidden;
+}
+
+.filter-pictures__body:hover {
+  overflow-y: auto;
+}
+
+.filter-pictures__body.filter-fix {
+  position: fixed;
+  top: 7.8125vw;
+  left: 7.2916666667vw;
 }
 
 .filter-pictures__title {
@@ -4522,14 +4566,19 @@ button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: relative;
   }
 
   .header__logo {
     font-size: 5.1282051282vw;
-    line-height: 5.1282051282vw;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin: 0;
+    line-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 
   .header__links {
