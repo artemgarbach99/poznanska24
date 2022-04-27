@@ -864,21 +864,29 @@ body::after {
   margin: -20.3125vw 0px 0px 0px;
 }
 
-.tabs-body-content__image-ibg {
+.tabs-body-content__image {
   display: block;
-  height: 38.90625vw;
+  height: auto;
+  position: relative;
 }
 
-.tabs-body-content__image-ibg:hover .featured-images__image-hv {
+.tabs-body-content__image:hover .featured-images__image-hv {
   -webkit-transition: opacity 1s ease 0s;
   -o-transition: opacity 1s ease 0s;
   transition: opacity 1s ease 0s;
   opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
-.tabs-body-content__image-ibg-b {
-  display: block;
-  height: 55.8854166667vw;
+.tabs-body-content__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .tabs-body-content__block {
@@ -3002,6 +3010,16 @@ body::after {
   padding: 0px 0px 10.4166666667vw 0px;
 }
 
+.selects-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0vw 0vw 3.6458333333vw 0vw;
+}
+
 .poznanska-main {
   position: relative;
 }
@@ -4381,12 +4399,8 @@ button {
     margin: 0vw;
   }
 
-  .tabs-body-content__image-ibg {
-    height: 84.6153846154vw;
-  }
-
-  .tabs-body-content__image-ibg-b {
-    height: 135.8974358974vw;
+  .tabs-body-content__image {
+    height: auto;
   }
 
   .tabs-body-content__block {

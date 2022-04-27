@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220426145926">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220427191043">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,6 +109,23 @@
 			<section class="news-content">
 				<div class="news-content__container">
 					<div class="news-content__body">
+						<div class="news-content__selects selects-news">
+							<div class="selects-news__select">
+								<select name="form[]" class="form">
+									<option value="1" selected>Category</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="selects-news__select">
+								<select name="form[]" class="form">
+									<option value="1" selected>sortuj według</option>
+									<option value="2">cena</option>
+									<option value="3">data</option>
+								</select>
+							</div>
+						</div>
 						<div data-tabs class="tabs">
 							<nav data-tabs-titles class="tabs__navigation">
 								<button type="button" class="tabs__title _tab-active">Wszystkie aktualności</button>
@@ -119,7 +136,7 @@
 								<div class="tabs__body">
 									<div class="tabs__inner tabs-body-content">
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
 												<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-hv"></picture>
 											</a>
@@ -129,7 +146,7 @@
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg-b">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/news/01.webp" type="image/webp"><img data-src="img/news/01.png" alt=""></picture>
 											</a>
 											<div class="tabs-body-content__block-b">
@@ -141,7 +158,7 @@
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg-b">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/news/02.webp" type="image/webp"><img data-src="img/news/02.png" alt=""></picture>
 											</a>
 											<div class="tabs-body-content__block-b">
@@ -153,7 +170,7 @@
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/seminar/01.webp" type="image/webp"><img data-src="img/seminar/01.png" alt=""></picture>
 												<picture><source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img data-src="img/lectures/cart-2.jpg" alt="" class="featured-images__image-hv"></picture>
 											</a>
@@ -167,43 +184,47 @@
 								<div class="tabs__body">
 									<div class="tabs__inner tabs-body-content">
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
+												<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-hv"></picture>
 											</a>
 											<div class="tabs-body-content__block">
 												<span class="tabs-body-content__span span">artykuł informacyjny</span>
-												<h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
+												<a href="" class="tabs-body-content__title h4">Póki Wszystko Płonie</a>
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg-b">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/news/01.webp" type="image/webp"><img data-src="img/news/01.png" alt=""></picture>
 											</a>
 											<div class="tabs-body-content__block-b">
 												<span class="tabs-body-content__span-b span">artykuł informacyjny</span>
 												<span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
 												</span>
-												<h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
+												<a href="" class="tabs-body-content__title-b h4">Póki Wszystko
+													Płonie</a>
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg-b">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/news/02.webp" type="image/webp"><img data-src="img/news/02.png" alt=""></picture>
 											</a>
 											<div class="tabs-body-content__block-b">
 												<span class="tabs-body-content__span-b span">artykuł informacyjny</span>
 												<span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
 												</span>
-												<h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
+												<a href="" class="tabs-body-content__title-b h4">Póki Wszystko
+													Płonie</a>
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/seminar/01.webp" type="image/webp"><img data-src="img/seminar/01.png" alt=""></picture>
+												<picture><source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img data-src="img/lectures/cart-2.jpg" alt="" class="featured-images__image-hv"></picture>
 											</a>
 											<div class="tabs-body-content__block">
 												<span class="tabs-body-content__span span">artykuł informacyjny</span>
-												<h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
+												<a href="" class="tabs-body-content__title h4">Póki Wszystko Płonie</a>
 											</div>
 										</article>
 									</div>
@@ -211,47 +232,139 @@
 								<div class="tabs__body">
 									<div class="tabs__inner tabs-body-content">
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
+												<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-hv"></picture>
 											</a>
 											<div class="tabs-body-content__block">
 												<span class="tabs-body-content__span span">artykuł informacyjny</span>
-												<h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
+												<a href="" class="tabs-body-content__title h4">Póki Wszystko Płonie</a>
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg-b">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/news/01.webp" type="image/webp"><img data-src="img/news/01.png" alt=""></picture>
 											</a>
 											<div class="tabs-body-content__block-b">
 												<span class="tabs-body-content__span-b span">artykuł informacyjny</span>
 												<span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
 												</span>
-												<h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
+												<a href="" class="tabs-body-content__title-b h4">Póki Wszystko
+													Płonie</a>
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg-b">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/news/02.webp" type="image/webp"><img data-src="img/news/02.png" alt=""></picture>
 											</a>
 											<div class="tabs-body-content__block-b">
 												<span class="tabs-body-content__span-b span">artykuł informacyjny</span>
 												<span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
 												</span>
-												<h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
+												<a href="" class="tabs-body-content__title-b h4">Póki Wszystko
+													Płonie</a>
 											</div>
 										</article>
 										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image-ibg">
+											<a href="" class="tabs-body-content__image">
 												<picture><source data-srcset="img/seminar/01.webp" type="image/webp"><img data-src="img/seminar/01.png" alt=""></picture>
+												<picture><source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img data-src="img/lectures/cart-2.jpg" alt="" class="featured-images__image-hv"></picture>
 											</a>
 											<div class="tabs-body-content__block">
 												<span class="tabs-body-content__span span">artykuł informacyjny</span>
-												<h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
+												<a href="" class="tabs-body-content__title h4">Póki Wszystko Płonie</a>
 											</div>
 										</article>
 									</div>
 								</div>
+								<!-- <div class="tabs__body">
+                                    <div class="tabs__inner tabs-body-content">
+                                        <article class="tabs-body-content__cart">
+                                            <a href="" class="tabs-body-content__image-ibg">
+                                                <picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
+                                            </a>
+                                            <div class="tabs-body-content__block">
+                                                <span class="tabs-body-content__span span">artykuł informacyjny</span>
+                                                <h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
+                                            </div>
+                                        </article>
+                                        <article class="tabs-body-content__cart">
+                                            <a href="" class="tabs-body-content__image-ibg-b">
+                                                <picture><source data-srcset="img/news/01.webp" type="image/webp"><img data-src="img/news/01.png" alt=""></picture>
+                                            </a>
+                                            <div class="tabs-body-content__block-b">
+                                                <span class="tabs-body-content__span-b span">artykuł informacyjny</span>
+                                                <span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
+                                                </span>
+                                                <h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
+                                            </div>
+                                        </article>
+                                        <article class="tabs-body-content__cart">
+                                            <a href="" class="tabs-body-content__image-ibg-b">
+                                                <picture><source data-srcset="img/news/02.webp" type="image/webp"><img data-src="img/news/02.png" alt=""></picture>
+                                            </a>
+                                            <div class="tabs-body-content__block-b">
+                                                <span class="tabs-body-content__span-b span">artykuł informacyjny</span>
+                                                <span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
+                                                </span>
+                                                <h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
+                                            </div>
+                                        </article>
+                                        <article class="tabs-body-content__cart">
+                                            <a href="" class="tabs-body-content__image-ibg">
+                                                <picture><source data-srcset="img/seminar/01.webp" type="image/webp"><img data-src="img/seminar/01.png" alt=""></picture>
+                                            </a>
+                                            <div class="tabs-body-content__block">
+                                                <span class="tabs-body-content__span span">artykuł informacyjny</span>
+                                                <h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="tabs__body">
+                                    <div class="tabs__inner tabs-body-content">
+                                        <article class="tabs-body-content__cart">
+                                            <a href="" class="tabs-body-content__image-ibg">
+                                                <picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
+                                            </a>
+                                            <div class="tabs-body-content__block">
+                                                <span class="tabs-body-content__span span">artykuł informacyjny</span>
+                                                <h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
+                                            </div>
+                                        </article>
+                                        <article class="tabs-body-content__cart">
+                                            <a href="" class="tabs-body-content__image-ibg-b">
+                                                <picture><source data-srcset="img/news/01.webp" type="image/webp"><img data-src="img/news/01.png" alt=""></picture>
+                                            </a>
+                                            <div class="tabs-body-content__block-b">
+                                                <span class="tabs-body-content__span-b span">artykuł informacyjny</span>
+                                                <span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
+                                                </span>
+                                                <h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
+                                            </div>
+                                        </article>
+                                        <article class="tabs-body-content__cart">
+                                            <a href="" class="tabs-body-content__image-ibg-b">
+                                                <picture><source data-srcset="img/news/02.webp" type="image/webp"><img data-src="img/news/02.png" alt=""></picture>
+                                            </a>
+                                            <div class="tabs-body-content__block-b">
+                                                <span class="tabs-body-content__span-b span">artykuł informacyjny</span>
+                                                <span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
+                                                </span>
+                                                <h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
+                                            </div>
+                                        </article>
+                                        <article class="tabs-body-content__cart">
+                                            <a href="" class="tabs-body-content__image-ibg">
+                                                <picture><source data-srcset="img/seminar/01.webp" type="image/webp"><img data-src="img/seminar/01.png" alt=""></picture>
+                                            </a>
+                                            <div class="tabs-body-content__block">
+                                                <span class="tabs-body-content__span span">artykuł informacyjny</span>
+                                                <h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div> -->
 							</div>
 							<div class="showmore">
 								<a href="" class="showmore__link">więcej artykułów</a>
@@ -576,7 +689,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220426145926"></script>
+	<script src="js/app.min.js?_v=20220427191043"></script>
 </body>
 
 </html>
