@@ -3017,7 +3017,7 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0vw 0vw 3.6458333333vw 0vw;
+  /* padding: 0vw 0vw 3.6458333333vw 0vw; */
 }
 
 .poznanska-main {
