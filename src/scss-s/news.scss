@@ -1,0 +1,154 @@
+//====================================================================================================
+.news-main {
+    background: url("@img/news/bg.png") right/cover no-repeat;
+    padding: vw(98) 0px;
+    @media (max-width: $mobile) {
+        padding: vw_m(50) 0px;
+        background-color: $mainColor;
+    }
+    // .lectures-main__container
+    &__container {
+    }
+    // .lectures-main__body
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: vw(190);
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: vw_m(45);
+        }
+    }
+    // .lectures-main__image-ibg
+    &__image-ibg {
+        width: vw(605);
+        height: vw(603);
+        &:hover {
+            .featured-images__image-hv {
+                transition: opacity 1s ease 0s;
+                opacity: 1;
+            }
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            height: vw_m(300);
+        }
+    }
+    // .lectures-main__content
+    &__content {
+        flex: 0 0 vw(600);
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+    // .lectures-main__span
+    &__span {
+        display: block;
+        color: $whiteColor;
+        margin: 0px 0px vw(15) 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px vw_m(15) 0px;
+        }
+    }
+    // .lectures-main__data
+    &__data {
+        display: block;
+        color: $whiteColor;
+        font-size: vw(40);
+        line-height: vw(45);
+        letter-spacing: vw(0.2);
+        @media (max-width: $mobile) {
+            font-size: vw_m(30);
+            line-height: vw_m(35);
+        }
+    }
+    // .lectures-main__title
+    &__title {
+        font-size: vw(72);
+        line-height: vw(80);
+        font-family: $CanelaFont;
+        letter-spacing: vw(0.2);
+        color: $whiteColor;
+        padding: vw(50) 0px vw(60) 0px;
+        @media (max-width: $mobile) {
+            font-size: vw_m(40);
+            line-height: vw_m(45);
+            padding: vw_m(25) 0px;
+        }
+    }
+    // .lectures-main__button
+    &__button {
+        display: inline-flex;
+        color: $whiteColor;
+    }
+    // .lectures-main__link
+    &__link {
+        display: inline-flex;
+        font-size: vw(30);
+        line-height: vw(34);
+        letter-spacing: vw(0.2);
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0px 0px 0px vw(60);
+        @media (max-width: $mobile) {
+            font-size: vw_m(20);
+            line-height: vw_m(44);
+            padding: 0px 0px 0px vw_m(60);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: vw(42);
+            height: vw(42);
+            border-radius: 50%;
+            background-color: $whiteColor;
+            left: 0;
+            bottom: vw(-5);
+            @media (max-width: $mobile) {
+                width: vw_m(40);
+                height: vw_m(40);
+                bottom: 0;
+            }
+        }
+        &:hover:before {
+            transform: scale(5);
+            transition: transform 0.3s ease 0s;
+            background: radial-gradient(circle farthest-side, #fff 17%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+}
+//========================================================================================================================================================
+.news-content {
+    padding: vw(200) vw(0);
+    @media (max-width: $mobile) {
+        padding: vw_m(100) vw(0);
+    }
+    // .news-content__container
+    &__container {
+    }
+    // .news-content__body
+    &__body {
+    }
+    // .news-content__selects
+    &__selects {
+    }
+}
+//========================================================================================================================================================
+.news-images {
+    padding: 0px 0px vw(200) 0px;
+    @media (max-width: $mobile) {
+        padding: 0px 0px vw_m(100) 0px;
+    }
+}
+//========================================================================================================================================================
+.selects-news {
+    display: flex;
+    justify-content: space-between;
+    // padding: vw(0) vw(0) vw(70) vw(0);
+    // .selects-news__select
+    &__select {
+    }
+}
+

@@ -1,0 +1,103 @@
+//====================================================================================================
+.contacts-main {
+    @media (max-width: $mobile) {
+        padding: 0px 0px vw_m(100) 0px;
+    }
+    // .contacts-main__container
+    &__container {
+    }
+    // .contacts-main__body
+    &__body {
+        padding: vw(100) 0px;
+        // border-top: vw(1) solid $greyColor;
+        border-bottom: vw(1) solid $greyColor;
+        @media (max-width: $mobile) {
+            padding: vw_m(50) 0px;
+        }
+    }
+    // .contacts-main__title
+    &__title {
+        max-width: vw(1240);
+        margin: 0px 0px vw(140) 0px;
+        @media (max-width: $mobile) {
+            max-width: none;
+            margin: 0px 0px vw_m(70) 0px;
+        }
+    }
+    // .contacts-main__row
+    &__row {
+        display: flex;
+        // align-items: center;
+        gap: vw(227);
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: vw_m(30);
+        }
+    }
+    // .contacts-main__column
+    &__column {
+        flex: 0 1 33.333%;
+        @media (max-width: $mobile) {
+            text-align: left;
+            &:last-child {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+    // .contacts-main__text
+    &__text {
+        display: inline-flex;
+        &:not(:last-child) {
+            margin-bottom: vw(15);
+        }
+    }
+    // .contacts-main__link
+    &__link {
+        position: relative;
+        display: inline-flex;
+        padding: 0px 0px vw(5) 0px;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        &:not(:last-child) {
+            margin-right: vw(70);
+            @media (max-width: $mobile) {
+                &:not(:last-child) {
+                    margin-bottom: vw_m(10);
+                }
+            }
+        }
+        @media (max-width: $mobile) {
+            padding: 0px 0px vw_m(5) 0px;
+        }
+    }
+    @keyframes underscored {
+        0% {
+            transform: scaleX(1);
+            transform-origin: right center;
+        }
+        35% {
+            transform: scaleX(0);
+            transform-origin: right center;
+        }
+        65% {
+            transform: scaleX(0);
+            transform-origin: left center;
+        }
+        100% {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+    }
+    .contacts-main__link:hover:after {
+        animation: underscored 0.8s linear;
+    }
+}
+//========================================================================================================================================================

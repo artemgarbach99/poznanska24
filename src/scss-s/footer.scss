@@ -1,0 +1,139 @@
+//====================================================================================================
+.footer {
+    background-color: $bgColor;
+    padding: vw(200) 0px vw(100) 0px;
+    @media (max-width: $mobile) {
+        padding: vw_m(50) 0px vw_m(50) 0px;
+    }
+    // .footer__container
+    &__container {
+    }
+    // .footer__body
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $mobile) {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+    }
+    // .footer__link-inner
+    &__link-inner {
+        font-size: vw(20);
+        line-height: vw(22);
+        letter-spacing: vw(0.2);
+        @media (max-width: $mobile) {
+            font-size: vw_m(20);
+            line-height: vw_m(22);
+            letter-spacing: vw_m(0.2);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            &:not(:last-child) {
+                margin-bottom: vw_m(40);
+            }
+        }
+        // & a {
+        //     font-size: vw(20);
+        //     line-height: vw(22);
+        //     letter-spacing: vw(0.2);
+        //     text-decoration: underline;
+        //     @media (max-width: $mobile) {
+        //         font-size: vw_m(20);
+        //         line-height: vw_m(22);
+        //         letter-spacing: vw_m(0.2);
+        //     }
+        // }
+    }
+    &__link {
+        font-size: vw(20);
+        line-height: vw(22);
+        letter-spacing: vw(0.2);
+        position: relative;
+        padding: 0px 0px vw(5) 0px;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: $mobile) {
+            font-size: vw_m(20);
+            line-height: vw_m(28);
+            letter-spacing: vw_m(0.2);
+            padding: 0px 0px vw_m(5) 0px;
+            align-self: center;
+        }
+    }
+    @keyframes underscored {
+        0% {
+            transform: scaleX(1);
+            transform-origin: right center;
+        }
+        35% {
+            transform: scaleX(0);
+            transform-origin: right center;
+        }
+        65% {
+            transform: scaleX(0);
+            transform-origin: left center;
+        }
+        100% {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+    }
+    .footer__link:hover:after {
+        animation: underscored 0.8s linear;
+    }
+    // .footer__social
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: vw(40);
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: vw_m(40);
+        }
+    }
+    // .footer__list
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: vw(40);
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: vw_m(20);
+        }
+    }
+    // .footer__item
+    &__item {
+        display: inline-flex;
+        & a {
+            font-size: vw(20);
+            line-height: vw(22);
+            letter-spacing: vw(0.2);
+            @media (max-width: $mobile) {
+                font-size: vw_m(22);
+                line-height: vw_m(24);
+                letter-spacing: vw_m(0.2);
+            }
+        }
+    }
+    // .footer__copy
+    &__copy {
+        font-size: vw(20);
+        line-height: vw(22);
+        letter-spacing: vw(0.2);
+        @media (max-width: $mobile) {
+            font-size: vw_m(20);
+            line-height: vw_m(22);
+            letter-spacing: vw_m(0.2);
+        }
+    }
+}
+
+//====================================================================================================

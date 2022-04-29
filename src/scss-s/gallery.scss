@@ -1,0 +1,221 @@
+//====================================================================================================
+.gallery-main {
+    position: relative;
+    padding: 0px 0px vw(200) 0px;
+    @media (max-width: $mobile) {
+        padding: 0px 0px vw_m(100) 0px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: vw(520);
+        top: 0;
+        left: 0;
+        background-color: $mainColor;
+        @media (max-width: $mobile) {
+            height: vw_m(450);
+        }
+    }
+    // .gallery-main__container
+    &__container {
+    }
+    // .gallery-main__row
+    &__row {
+        padding: vw(100) 0px 0px 0px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        @media (max-width: $mobile) {
+            padding: vw_m(150) 0px 0px 0px;
+            flex-direction: column;
+            align-items: center;
+            gap: vw_m(75);
+        }
+    }
+    // .gallery-main__content
+    &__content {
+    }
+    // .gallery-main__title
+    &__title {
+        margin: 0px 0px vw(200) 0px;
+        text-align: center;
+        @media (max-width: $mobile) {
+            // margin: 0px 0px vw_m(75) 0px;
+        }
+    }
+    // .gallery-main__text
+    &__text {
+        max-width: vw(443);
+        @media (max-width: $mobile) {
+            max-width: none;
+        }
+    }
+    // .gallery-main__image
+    &__image-ibg {
+        width: vw(515);
+        height: vw(685);
+        @media (max-width: $mobile) {
+            width: 100%;
+            height: vw_m(350);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+//========================================================================================================================================================
+.gallery-content {
+    // .gallery-content__container
+    &__container {
+    }
+    // .gallery-content__body
+    &__body {
+        max-width: vw(1200);
+        margin-left: auto;
+        @media (max-width: $mobile) {
+            max-width: none;
+            margin: none;
+            padding: vw_m(0) vw_m(15);
+        }
+    }
+    // .gallery-content__text
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: vw(140);
+            @media (max-width: $mobile) {
+                margin-bottom: vw_m(40);
+            }
+        }
+    }
+}
+//========================================================================================================================================================
+.gallery-block {
+    padding: vw(100) 0px vw(200) 0px;
+    @media (max-width: $mobile) {
+        padding: vw_m(200) 0px vw_m(100) 0px;
+    }
+    // .gallery-block__container
+    &__container {
+    }
+    // .gallery-block__body
+    &__body {
+        display: flex;
+        justify-content: center;
+    }
+    // .gallery-block__block
+    &__block {
+        display: block;
+        width: vw(1205);
+        height: vw(679);
+        // background: url("@img/gallery/thumb.png") left/contain no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @media (max-width: $mobile) {
+            width: 100%;
+            height: vw_m(370);
+            background-image: none;
+        }
+        &:hover {
+            // background: url("@img/gallery/thumb.png") center/cover no-repeat;
+            & .gallery-block__image-ibg {
+                transform: translate(vw(0), 0px);
+                height: vw(394);
+                width: vw(747);
+                transition: transform 0.5s ease 0s;
+            }
+            & .gallery-block__title {
+                transform: translate(vw(-140), 0px);
+                text-align: center;
+                transition: transform 0.5s ease 0s;
+            }
+            .gallery-block__bg-ibg {
+                width: 100%;
+                transition: width 0.5s ease 0s;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: vw_m(180);
+            height: vw_m(270);
+            background: url("@img/gallery/thumb.png") center/cover no-repeat;
+            top: vw_m(-100);
+            @media (min-width: $mobile) {
+                display: none;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: vw_m(160);
+            height: vw_m(160);
+            top: vw_m(0);
+            background: url("@img/gallery/02.jpg") center/cover no-repeat;
+            @media (min-width: $mobile) {
+                display: none;
+            }
+        }
+    }
+    // .gallery-block__bg-ibg
+    &__bg-ibg {
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: width 0.5s ease 0s;
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    // .gallery-block__content
+    &__content {
+        width: vw(747);
+        height: vw(394);
+        border: vw(1) solid $greyColor;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @media (max-width: $mobile) {
+            width: vw_m(300);
+            height: vw_m(370);
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+    // .gallery-block__image-ibg
+    &__image-ibg {
+        position: absolute;
+        left: 0;
+        width: vw(447);
+        height: vw(380);
+        transform: translate(vw(-75), 0px);
+        transition: width 0.5s ease 0s;
+        @media (max-width: $mobile) {
+            display: none;
+            // transform: translate(vw_m(60), vw_m(-170));
+            // width: vw_m(160);
+            // height: vw_m(160);
+        }
+    }
+    // .gallery-block__title
+    &__title {
+        position: absolute;
+        right: 0;
+        transform: translate(vw(265), 0px);
+        transition: transform 0.5s ease 0s;
+        @media (max-width: $mobile) {
+            transform: translate(0px, 0px);
+            position: relative;
+            color: $blackColor;
+            text-align: center;
+            padding: 0px 0px vw_m(45) 0px;
+        }
+    }
+}
+//========================================================================================================================================================

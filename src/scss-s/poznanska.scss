@@ -1,0 +1,634 @@
+//========================================================================================================================================================
+.poznanska-main {
+    position: relative;
+    // .poznanska-main__body
+    &__body {
+        height: vw(794);
+        overflow: hidden;
+        @media (max-width: $mobile) {
+            // height: 100%;
+            height: vw_m(794);
+            // height: auto;
+        }
+    }
+    // .poznanska-main__video
+    // &__video {
+    //     object-fit: cover;
+    // }
+    // .poznanska-main__image
+    &__image {
+        position: relative;
+        width: 100%;
+        height: vw(794);
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        @media (max-width: $mobile) {
+            height: 100%;
+            & img {
+                height: 100%;
+            }
+        }
+    }
+    // .poznanska-main__content
+    &__content {
+        position: absolute;
+        top: vw(150);
+        left: vw(265);
+        max-width: vw(1400);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+        @media (max-width: $mobile) {
+            top: 0;
+            left: 0;
+            max-width: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: vw_m(80) vw_m(20);
+        }
+    }
+    // .poznanska-main__title
+    &__title {
+        font-size: vw(160);
+        line-height: vw(180);
+        font-family: $CanelaFont;
+        color: $whiteColor;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0px 0px vw(58) 0px;
+        @media (max-width: $mobile) {
+            font-size: vw_m(60);
+            line-height: 120%;
+            margin: 0px 0px vw_m(50) 0px;
+        }
+    }
+    // .poznanska-main__link
+    &__link {
+        display: inline-block;
+        align-items: center;
+        color: $whiteColor;
+        &::before {
+            content: "";
+            position: absolute;
+            width: vw(42);
+            height: vw(42);
+            border-radius: 50%;
+            background-color: $whiteColor;
+            bottom: vw(-5);
+            left: 0;
+            @media (max-width: $mobile) {
+                width: vw_m(40);
+                height: vw_m(40);
+                bottom: vw_m(0);
+            }
+        }
+        &:hover:before {
+            transform: scale(5);
+            transition: transform 0.3s ease 0s;
+            background: radial-gradient(circle farthest-side, #fff 17%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+}
+//========================================================================================================================================================
+.poznanska-favorites {
+    padding: vw(200) 0px vw(100) 0px;
+    @media (max-width: $mobile) {
+        padding: vw_m(100) 0px vw_m(50) 0px;
+    }
+}
+//========================================================================================================================================================
+.poznanska-showmore {
+    // .poznanska-showmore__container
+    &__container {
+    }
+}
+//========================================================================================================================================================
+.poznanska-exhibition {
+    padding: vw(200) vw(0);
+    @media (max-width: $mobile) {
+        padding: vw_m(100) vw_m(0);
+    }
+    // .poznanska-exhibition__container
+    &__container {
+    }
+    // .poznanska-exhibition__body
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: vw_m(50);
+        }
+    }
+    // .poznanska-exhibition__bg
+    &__bg {
+        background: url("@img/gallery/thumb.png") 0 0 / cover no-repeat;
+        // background-size: cover;
+        // background-size: 100% 100%;
+        width: vw(736);
+        height: vw(733);
+        padding: vw(71);
+        @media (max-width: $mobile) {
+            width: 100%;
+            height: vw_m(330);
+            padding: vw_m(30);
+        }
+        &:hover {
+            .featured-images__image-hv {
+                transition: opacity 1s ease 0s;
+                opacity: 1;
+            }
+        }
+    }
+    // .poznanska-exhibition__image-ibg
+    &__image-ibg {
+        display: block;
+        height: 100%;
+    }
+    // .poznanska-exhibition__content
+    &__content {
+        width: vw(765);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+    // .poznanska-exhibition__span
+    &__span {
+    }
+    // .poznanska-exhibition__data
+    &__data {
+        margin: vw(15) 0px vw(50) 0px;
+        @media (max-width: $mobile) {
+            margin: vw_m(10) 0px vw_m(25) 0px;
+        }
+    }
+    // .poznanska-exhibition__title
+    &__title {
+        font-size: vw(72);
+        line-height: vw(86);
+        letter-spacing: vw(0.2);
+        color: $mainColor;
+        font-family: $CanelaFont;
+        max-width: vw(600);
+        margin: 0px 0px vw(50) 0px;
+        @media (max-width: $mobile) {
+            font-size: vw_m(36);
+            line-height: vw_m(50);
+            max-width: none;
+            margin: 0px 0px vw_m(10) 0px;
+        }
+    }
+    // .poznanska-exhibition__link
+    &__link {
+        display: inline-block;
+        align-items: center;
+        color: $mainColor;
+        &::before {
+            content: "";
+            position: absolute;
+            width: vw(42);
+            height: vw(42);
+            border-radius: 50%;
+            background-color: $mainColor;
+            left: 0;
+            bottom: vw(-5);
+            @media (max-width: $mobile) {
+                width: vw_m(40);
+                height: vw_m(40);
+                bottom: vw_m(0);
+            }
+        }
+        &:hover:before {
+            transform: scale(5);
+            transition: transform 0.3s ease 0s;
+            background: radial-gradient(circle farthest-side, #e7d499 17%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+    // .poznanska-exhibition__showmore
+    &__showmore {
+        padding: vw(147) 0px 0px 0px;
+        @media (max-width: $mobile) {
+            padding: vw_m(70) 0px 0px 0px;
+        }
+    }
+}
+//========================================================================================================================================================
+.poznanska-lectures {
+    padding: 0px 0px vw(200) 0px;
+    @media (max-width: $mobile) {
+        padding: 0px 0px vw_m(100) 0px;
+    }
+    // .poznanska-lectures__container
+    &__container {
+    }
+    // .poznanska-lectures__body
+    &__body {
+    }
+    // .poznanska-lectures__title
+    &__title {
+        text-align: center;
+        color: $blackColor;
+        letter-spacing: none;
+        margin: 0px 0px vw(100) 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px vw_m(50) 0px;
+        }
+    }
+    // .poznanska-lectures__content
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px vw(157) 0px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: vw_m(75);
+            margin: 0px 0px vw_m(75) 0px;
+        }
+    }
+    // .poznanska-lectures__showmore
+    &__showmore {
+    }
+    // .poznanska-lectures__cart
+    &__cart {
+        width: vw(750);
+        &:hover {
+            .featured-images__image-hv {
+                transition: opacity 1s ease 0s;
+                opacity: 1;
+            }
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+    // .poznanska-lectures__image-ibg
+    &__image-ibg {
+        display: block;
+        height: vw(747);
+        @media (max-width: $mobile) {
+            height: vw_m(330);
+        }
+    }
+    // .poznanska-lectures__block
+    &__block {
+        padding: vw(35) vw(31) 0px vw(31);
+        @media (max-width: $mobile) {
+            padding: vw_m(15) vw_m(0) 0px vw_m(0);
+        }
+    }
+    // .poznanska-lectures__data
+    &__data {
+    }
+    // .poznanska-lectures__line
+    &__line {
+        margin: vw(15) 0px 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: vw_m(5);
+            margin: vw_m(10) 0px 0px 0px;
+            align-items: flex-start;
+        }
+    }
+    // .poznanska-lectures__lable
+    &__lable {
+    }
+    // .poznanska-lectures__link
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        color: $mainColor;
+        &::before {
+            content: "";
+            position: absolute;
+            width: vw(42);
+            height: vw(42);
+            border-radius: 50%;
+            background-color: $mainColor;
+            left: 0;
+            bottom: vw(-5);
+            @media (max-width: $mobile) {
+                width: vw_m(40);
+                height: vw_m(40);
+                bottom: vw_m(0);
+            }
+        }
+        &:hover:before {
+            transform: scale(5);
+            transition: transform 0.3s ease 0s;
+            background: radial-gradient(circle farthest-side, #e7d499 17%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+}
+//========================================================================================================================================================
+.poznanska-sign-up {
+    // .poznanska-sign-up__body
+    &__body {
+        display: flex;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+    // .poznanska-sign-up__column
+    &__column {
+        flex: 0 1 50%;
+        height: vw(660);
+        position: relative;
+        &:hover {
+            .featured-images__image-hv {
+                transition: opacity 1s ease 0s;
+                opacity: 1;
+            }
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            flex: none;
+            height: vw_m(360);
+        }
+    }
+    // .poznanska-sign-up__image-ibg
+    &__image-ibg {
+        display: block;
+        height: 100%;
+    }
+    // .poznanska-sign-up__content
+    &__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-align: center;
+        padding: vw(200) 0px;
+        @media (max-width: $mobile) {
+            padding: vw_m(100) 0px;
+        }
+    }
+    // .poznanska-sign-up__title
+    &__title {
+    }
+    // .poznanska-sign-up__inner
+    &__inner {
+        background: url("@img/poznanska/bgcover.png") center/cover no-repeat;
+        height: 100%;
+        // padding: vw(0) vw(231);
+        display: flex;
+        flex-direction: column;
+    }
+    // .poznanska-sign-up__inner-con
+    &__inner-con {
+        max-width: vw(498);
+        margin: 0px auto;
+        @media (max-width: $mobile) {
+            max-width: none;
+            padding: vw(0) vw_m(50);
+        }
+    }
+    // .poznanska-sign-up__text
+    &__text {
+        color: $whiteColor;
+        opacity: 0.6;
+        margin: vw(200) 0px vw(50) 0px;
+        @media (max-width: $mobile) {
+            margin: vw_m(50) 0px vw_m(30) 0px;
+        }
+    }
+    // .poznanska-sign-up__link
+    &__link {
+        display: inline-flex;
+        color: $whiteColor;
+        &::before {
+            content: "";
+            position: absolute;
+            width: vw(42);
+            height: vw(42);
+            border-radius: 50%;
+            background-color: $whiteColor;
+            left: 0;
+            bottom: vw(-5);
+            @media (max-width: $mobile) {
+                width: vw_m(40);
+                height: vw_m(40);
+                bottom: vw_m(0);
+            }
+        }
+        &:hover:before {
+            transform: scale(5);
+            transition: transform 0.3s ease 0s;
+            background: radial-gradient(circle farthest-side, #fff 17%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+    // .poznanska-sign-up__bottom
+    &__bottom {
+        padding: vw(40) vw(0);
+        margin-top: auto;
+        text-align: center;
+        border-top: 1px solid rgba($color: $whiteColor, $alpha: 0.1);
+        border-bottom: 1px solid $whiteColor;
+        @media (max-width: $mobile) {
+            padding: vw_m(20) vw(0);
+        }
+    }
+    // .poznanska-sign-up__link-b
+    &__link-b {
+        display: inline-flex;
+        align-self: center;
+        color: $whiteColor;
+        font-size: vw(30);
+        line-height: vw(34);
+        color: $whiteColor;
+        position: relative;
+        padding: 0px 0px vw(5) 0px;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            @media (max-width: $mobile) {
+                padding: 0px 0px vw_m(5) 0px;
+            }
+        }
+        @media (max-width: $mobile) {
+            font-size: vw_m(20);
+            line-height: vw_m(24);
+            padding: 0px 0px vw_m(5) 0px;
+        }
+    }
+    @keyframes underscored {
+        0% {
+            transform: scaleX(1);
+            transform-origin: right center;
+        }
+        35% {
+            transform: scaleX(0);
+            transform-origin: right center;
+        }
+        65% {
+            transform: scaleX(0);
+            transform-origin: left center;
+        }
+        100% {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+    }
+    .poznanska-sign-up__link-b:hover:after {
+        animation: underscored 0.8s linear;
+    }
+}
+//========================================================================================================================================================
+.poznanska-gallery {
+    padding: vw(200) 0px;
+    @media (max-width: $mobile) {
+        padding: vw_m(100) 0px;
+    }
+    // .poznanska-gallery__container
+    &__container {
+    }
+    // .poznanska-gallery__body
+    &__body {
+    }
+    // .poznanska-gallery__header
+    &__header {
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px vw(100) 0px;
+        position: relative;
+        @media (max-width: $mobile) {
+            padding: 0px 0px vw_m(50) 0px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: vw(320);
+            height: vw(1);
+            bottom: 0;
+            opacity: 0.35;
+            background-color: $mainColor;
+            @media (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+    }
+    // .poznanska-gallery__title
+    &__title {
+        color: $mainColor;
+    }
+    // .poznanska-gallery__inner
+    &__inner {
+        max-width: vw(1200);
+        margin: 0px auto;
+        padding: vw(100) 0px;
+        @media (max-width: $mobile) {
+            max-width: none;
+            margin: 0px;
+            padding: vw_m(50) 0px;
+        }
+    }
+    // .poznanska-gallery__text
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: vw(110);
+            @media (max-width: $mobile) {
+                margin-bottom: vw_m(50);
+            }
+        }
+    }
+}
+//========================================================================================================================================================
+.poznanska-news {
+    @media (max-width: $mobile) {
+        padding: 0px 0px vw_m(100) 0px;
+    }
+    // .poznanska-news__container
+    &__container {
+    }
+    // .poznanska-news__body
+    &__body {
+    }
+    // .poznanska-news__lable
+    &__lable {
+        color: $blackColor;
+        text-align: center;
+        margin: 0px 0px vw(100) 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px vw_m(50) 0px;
+            font-size: vw_m(50);
+            line-height: 120%;
+        }
+    }
+    // .poznanska-news__title
+    &__title {
+    }
+    // .poznanska-news__row
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 0px vw(100) 0px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: vw_m(75);
+            margin: 0px 0px vw_m(50) 0px;
+        }
+    }
+    // .poznanska-news__cart
+    &__cart {
+        width: vw(750);
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+    // .poznanska-news__image-ibg
+    &__image-ibg {
+        display: block;
+        height: vw(1001);
+        @media (max-width: $mobile) {
+            height: vw_m(500);
+        }
+    }
+    // .poznanska-news__block
+    &__block {
+        padding: vw(35) 0px 0px 0px;
+        @media (max-width: $mobile) {
+            padding: vw_m(25) 0px 0px 0px;
+        }
+    }
+    // .poznanska-news__line
+    &__line {
+        margin: 0px 0px vw(15) 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $mobile) {
+            margin: 0px 0px vw_m(10) 0px;
+        }
+    }
+    // .poznanska-news__data
+    &__data {
+    }
+}
+//========================================================================================================================================================
