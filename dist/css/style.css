@@ -420,6 +420,7 @@ textarea.input {
   line-height: 1.7708333333vw;
   letter-spacing: 0.0104166667vw;
   color: #202020;
+  text-transform: uppercase;
 }
 
 .select__value {
