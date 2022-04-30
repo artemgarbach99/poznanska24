@@ -409,7 +409,6 @@ textarea.input {
 
 .select__body {
   position: relative;
-  min-width: 10.4166666667vw;
 }
 
 .select__title {
@@ -3017,7 +3016,6 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /* padding: 0vw 0vw 3.6458333333vw 0vw; */
 }
 
 .poznanska-main {
@@ -4286,10 +4284,6 @@ button {
     height: 2.5641025641vw;
     left: 1.7948717949vw;
     top: 1.7948717949vw;
-  }
-
-  .select__body {
-    min-width: 33.3333333333vw;
   }
 
   .select__title {

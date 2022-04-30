@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220427191043">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220430135555">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +25,10 @@
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="/obrazy.html" class="menu__link current-page">obrazy</a>
-								</li>
+								<li class="menu__item"><a href="/obrazy.html" class="menu__link current-page">obrazy</a></li>
 								<!-- <li class="menu__item"><a href="" class="menu__link">artyści</a></li> -->
 								<!-- <li class="menu__item"><a href="" class="menu__link">jak kupić</a></li> -->
-								<li class="menu__item"><a href="/lectures.html" class="menu__link">wykłady o sztuce</a>
-								</li>
+								<li class="menu__item"><a href="/lectures.html" class="menu__link">wykłady o sztuce</a></li>
 								<li class="menu__item"><a href="/workshops.html" class="menu__link">warsztaty</a></li>
 								<li class="menu__item"><a href="/gallery.html" class="menu__link">o galerii</a></li>
 								<li class="menu__item"><a href="/news.html" class="menu__link">aktualności</a></li>
@@ -102,14 +100,8 @@
 							</div>
 						</div>
 						<div class="news-main__image-ibg">
-							<picture>
-								<source data-srcset="img/lectures/01.webp" type="image/webp"><img
-									data-src="img/lectures/01.jpg" alt="">
-							</picture>
-							<picture>
-								<source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img
-									data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-hv">
-							</picture>
+							<picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
+							<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-hv"></picture>
 						</div>
 					</div>
 				</div>
@@ -119,7 +111,7 @@
 					<div class="news-content__body">
 						<div class="news-content__selects selects-news">
 							<div class="selects-news__select">
-								<select name="form[]" class="form">
+								<select data-speed="500" name="form[]" class="form">
 									<option value="1" selected>Category</option>
 									<option value="2">Пункт №2</option>
 									<option value="3">Пункт №3</option>
@@ -127,89 +119,21 @@
 								</select>
 							</div>
 							<div class="selects-news__select">
-								<select name="form[]" class="form">
+								<select data-speed="500" name="form[]" class="form">
 									<option value="1" selected>sortuj według</option>
 									<option value="2">cena</option>
 									<option value="3">data</option>
 								</select>
 							</div>
 						</div>
-						<div class="tabs">
-							<!-- <nav data-tabs-titles class="tabs__navigation">
+						<div data-tabs class="tabs">
+							<nav data-tabs-titles class="tabs__navigation">
 								<button type="button" class="tabs__title _tab-active">Wszystkie aktualności</button>
 								<button type="button" class="tabs__title">wydarzenia</button>
 								<button type="button" class="tabs__title">informacyjne</button>
-							</nav> -->
-							<div class="tabs__content">
+							</nav>
+							<div data-tabs-body class="tabs__content">
 								<div class="tabs__body">
-									<div class="tabs__inner tabs-body-content">
-										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image">
-												<picture>
-													<source data-srcset="img/lectures/01.webp" type="image/webp"><img
-														data-src="img/lectures/01.jpg" alt="">
-												</picture>
-												<picture>
-													<source data-srcset="img/lectures/cart-3.webp" type="image/webp">
-													<img data-src="img/lectures/cart-3.jpg" alt=""
-														class="featured-images__image-hv">
-												</picture>
-											</a>
-											<div class="tabs-body-content__block">
-												<span class="tabs-body-content__span span">artykuł informacyjny</span>
-												<a href="" class="tabs-body-content__title h4">Póki Wszystko Płonie</a>
-											</div>
-										</article>
-										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image">
-												<picture>
-													<source data-srcset="img/news/01.webp" type="image/webp"><img
-														data-src="img/news/01.png" alt="">
-												</picture>
-											</a>
-											<div class="tabs-body-content__block-b">
-												<span class="tabs-body-content__span-b span">artykuł informacyjny</span>
-												<span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
-												</span>
-												<a href="" class="tabs-body-content__title-b h4">Póki Wszystko
-													Płonie</a>
-											</div>
-										</article>
-										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image">
-												<picture>
-													<source data-srcset="img/news/02.webp" type="image/webp"><img
-														data-src="img/news/02.png" alt="">
-												</picture>
-											</a>
-											<div class="tabs-body-content__block-b">
-												<span class="tabs-body-content__span-b span">artykuł informacyjny</span>
-												<span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
-												</span>
-												<a href="" class="tabs-body-content__title-b h4">Póki Wszystko
-													Płonie</a>
-											</div>
-										</article>
-										<article class="tabs-body-content__cart">
-											<a href="" class="tabs-body-content__image">
-												<picture>
-													<source data-srcset="img/seminar/01.webp" type="image/webp"><img
-														data-src="img/seminar/01.png" alt="">
-												</picture>
-												<picture>
-													<source data-srcset="img/lectures/cart-2.webp" type="image/webp">
-													<img data-src="img/lectures/cart-2.jpg" alt=""
-														class="featured-images__image-hv">
-												</picture>
-											</a>
-											<div class="tabs-body-content__block">
-												<span class="tabs-body-content__span span">artykuł informacyjny</span>
-												<a href="" class="tabs-body-content__title h4">Póki Wszystko Płonie</a>
-											</div>
-										</article>
-									</div>
-								</div>
-								<!-- <div class="tabs__body">
 									<div class="tabs__inner tabs-body-content">
 										<article class="tabs-body-content__cart">
 											<a href="" class="tabs-body-content__image">
@@ -304,95 +228,55 @@
 											</div>
 										</article>
 									</div>
-								</div> -->
-								<!-- <div class="tabs__body">
-                                    <div class="tabs__inner tabs-body-content">
-                                        <article class="tabs-body-content__cart">
-                                            <a href="" class="tabs-body-content__image-ibg">
-                                                <picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
-                                            </a>
-                                            <div class="tabs-body-content__block">
-                                                <span class="tabs-body-content__span span">artykuł informacyjny</span>
-                                                <h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
-                                            </div>
-                                        </article>
-                                        <article class="tabs-body-content__cart">
-                                            <a href="" class="tabs-body-content__image-ibg-b">
-                                                <picture><source data-srcset="img/news/01.webp" type="image/webp"><img data-src="img/news/01.png" alt=""></picture>
-                                            </a>
-                                            <div class="tabs-body-content__block-b">
-                                                <span class="tabs-body-content__span-b span">artykuł informacyjny</span>
-                                                <span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
-                                                </span>
-                                                <h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
-                                            </div>
-                                        </article>
-                                        <article class="tabs-body-content__cart">
-                                            <a href="" class="tabs-body-content__image-ibg-b">
-                                                <picture><source data-srcset="img/news/02.webp" type="image/webp"><img data-src="img/news/02.png" alt=""></picture>
-                                            </a>
-                                            <div class="tabs-body-content__block-b">
-                                                <span class="tabs-body-content__span-b span">artykuł informacyjny</span>
-                                                <span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
-                                                </span>
-                                                <h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
-                                            </div>
-                                        </article>
-                                        <article class="tabs-body-content__cart">
-                                            <a href="" class="tabs-body-content__image-ibg">
-                                                <picture><source data-srcset="img/seminar/01.webp" type="image/webp"><img data-src="img/seminar/01.png" alt=""></picture>
-                                            </a>
-                                            <div class="tabs-body-content__block">
-                                                <span class="tabs-body-content__span span">artykuł informacyjny</span>
-                                                <h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
-                                <div class="tabs__body">
-                                    <div class="tabs__inner tabs-body-content">
-                                        <article class="tabs-body-content__cart">
-                                            <a href="" class="tabs-body-content__image-ibg">
-                                                <picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
-                                            </a>
-                                            <div class="tabs-body-content__block">
-                                                <span class="tabs-body-content__span span">artykuł informacyjny</span>
-                                                <h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
-                                            </div>
-                                        </article>
-                                        <article class="tabs-body-content__cart">
-                                            <a href="" class="tabs-body-content__image-ibg-b">
-                                                <picture><source data-srcset="img/news/01.webp" type="image/webp"><img data-src="img/news/01.png" alt=""></picture>
-                                            </a>
-                                            <div class="tabs-body-content__block-b">
-                                                <span class="tabs-body-content__span-b span">artykuł informacyjny</span>
-                                                <span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
-                                                </span>
-                                                <h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
-                                            </div>
-                                        </article>
-                                        <article class="tabs-body-content__cart">
-                                            <a href="" class="tabs-body-content__image-ibg-b">
-                                                <picture><source data-srcset="img/news/02.webp" type="image/webp"><img data-src="img/news/02.png" alt=""></picture>
-                                            </a>
-                                            <div class="tabs-body-content__block-b">
-                                                <span class="tabs-body-content__span-b span">artykuł informacyjny</span>
-                                                <span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
-                                                </span>
-                                                <h4 class="tabs-body-content__title-b h4">Póki Wszystko Płonie</h4>
-                                            </div>
-                                        </article>
-                                        <article class="tabs-body-content__cart">
-                                            <a href="" class="tabs-body-content__image-ibg">
-                                                <picture><source data-srcset="img/seminar/01.webp" type="image/webp"><img data-src="img/seminar/01.png" alt=""></picture>
-                                            </a>
-                                            <div class="tabs-body-content__block">
-                                                <span class="tabs-body-content__span span">artykuł informacyjny</span>
-                                                <h4 class="tabs-body-content__title h4">Póki Wszystko Płonie</h4>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div> -->
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__inner tabs-body-content">
+										<article class="tabs-body-content__cart">
+											<a href="" class="tabs-body-content__image">
+												<picture><source data-srcset="img/lectures/01.webp" type="image/webp"><img data-src="img/lectures/01.jpg" alt=""></picture>
+												<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-hv"></picture>
+											</a>
+											<div class="tabs-body-content__block">
+												<span class="tabs-body-content__span span">artykuł informacyjny</span>
+												<a href="" class="tabs-body-content__title h4">Póki Wszystko Płonie</a>
+											</div>
+										</article>
+										<article class="tabs-body-content__cart">
+											<a href="" class="tabs-body-content__image">
+												<picture><source data-srcset="img/news/01.webp" type="image/webp"><img data-src="img/news/01.png" alt=""></picture>
+											</a>
+											<div class="tabs-body-content__block-b">
+												<span class="tabs-body-content__span-b span">artykuł informacyjny</span>
+												<span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
+												</span>
+												<a href="" class="tabs-body-content__title-b h4">Póki Wszystko
+													Płonie</a>
+											</div>
+										</article>
+										<article class="tabs-body-content__cart">
+											<a href="" class="tabs-body-content__image">
+												<picture><source data-srcset="img/news/02.webp" type="image/webp"><img data-src="img/news/02.png" alt=""></picture>
+											</a>
+											<div class="tabs-body-content__block-b">
+												<span class="tabs-body-content__span-b span">artykuł informacyjny</span>
+												<span class="tabs-body-content__data data">Feb 17th - Mar 19th, 2022
+												</span>
+												<a href="" class="tabs-body-content__title-b h4">Póki Wszystko
+													Płonie</a>
+											</div>
+										</article>
+										<article class="tabs-body-content__cart">
+											<a href="" class="tabs-body-content__image">
+												<picture><source data-srcset="img/seminar/01.webp" type="image/webp"><img data-src="img/seminar/01.png" alt=""></picture>
+												<picture><source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img data-src="img/lectures/cart-2.jpg" alt="" class="featured-images__image-hv"></picture>
+											</a>
+											<div class="tabs-body-content__block">
+												<span class="tabs-body-content__span span">artykuł informacyjny</span>
+												<a href="" class="tabs-body-content__title h4">Póki Wszystko Płonie</a>
+											</div>
+										</article>
+									</div>
+								</div>
 							</div>
 							<div class="showmore">
 								<a href="" class="showmore__link">więcej artykułów</a>
@@ -400,9 +284,9 @@
 							<!-- <div class="tabs__showmore showmore-tabs">
                                 <a href="" class="showmore-tabs__link">więcej artykułów</a>
                             </div> -->
+							<!-- </div> -->
 						</div>
 					</div>
-				</div>
 			</section>
 			<section class="news-images">
 				<div class="featured-images">
@@ -415,16 +299,8 @@
 								<article class="featured-images__column">
 									<a href="" class="featured-images__bg">
 										<div class="featured-images__image">
-											<picture>
-												<source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img
-													data-src="img/lectures/cart-3.jpg" alt=""
-													class="featured-images__image-main">
-											</picture>
-											<picture>
-												<source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img
-													data-src="img/lectures/cart-2.jpg" alt=""
-													class="featured-images__image-hv">
-											</picture>
+											<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-main"></picture>
+											<picture><source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img data-src="img/lectures/cart-2.jpg" alt="" class="featured-images__image-hv"></picture>
 										</div>
 									</a>
 									<div class="featured-images__block">
@@ -436,16 +312,8 @@
 								<article class="featured-images__column">
 									<a href="" class="featured-images__bg">
 										<div class="featured-images__image">
-											<picture>
-												<source data-srcset="img/lectures/cart-1.webp" type="image/webp"><img
-													data-src="img/lectures/cart-1.jpg" alt=""
-													class="featured-images__image-main">
-											</picture>
-											<picture>
-												<source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img
-													data-src="img/lectures/cart-3.jpg" alt=""
-													class="featured-images__image-hv">
-											</picture>
+											<picture><source data-srcset="img/lectures/cart-1.webp" type="image/webp"><img data-src="img/lectures/cart-1.jpg" alt="" class="featured-images__image-main"></picture>
+											<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-hv"></picture>
 										</div>
 									</a>
 									<div class="featured-images__block">
@@ -457,21 +325,12 @@
 								<article class="featured-images__column">
 									<a href="" class="featured-images__bg">
 										<div class="featured-images__image">
-											<picture>
-												<source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img
-													data-src="img/lectures/cart-2.jpg" alt=""
-													class="featured-images__image-main">
-											</picture>
-											<picture>
-												<source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img
-													data-src="img/lectures/cart-3.jpg" alt=""
-													class="featured-images__image-hv">
-											</picture>
+											<picture><source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img data-src="img/lectures/cart-2.jpg" alt="" class="featured-images__image-main"></picture>
+											<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-hv"></picture>
 										</div>
 									</a>
 									<div class="featured-images__block">
-										<a href="" data-tippy-content="full name"
-											class="featured-images__title h4">Brzoskwiniowy Za...
+										<a href="" data-tippy-content="full name" class="featured-images__title h4">Brzoskwiniowy Za...
 										</a>
 										<span class="featured-images__data">Yulii Stratovich • 2022</span>
 										<span class="featured-images__price">12 499 zł</span>
@@ -480,16 +339,8 @@
 								<article class="featured-images__column">
 									<a href="" class="featured-images__bg">
 										<div class="featured-images__image">
-											<picture>
-												<source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img
-													data-src="img/lectures/cart-3.jpg" alt=""
-													class="featured-images__image-main">
-											</picture>
-											<picture>
-												<source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img
-													data-src="img/lectures/cart-2.jpg" alt=""
-													class="featured-images__image-hv">
-											</picture>
+											<picture><source data-srcset="img/lectures/cart-3.webp" type="image/webp"><img data-src="img/lectures/cart-3.jpg" alt="" class="featured-images__image-main"></picture>
+											<picture><source data-srcset="img/lectures/cart-2.webp" type="image/webp"><img data-src="img/lectures/cart-2.jpg" alt="" class="featured-images__image-hv"></picture>
 										</div>
 									</a>
 									<div class="featured-images__block">
@@ -509,8 +360,7 @@
 						<h2 class="mail__title h2">Dołącz do naszej listy e-mailowej</h2>
 						<form action="" class="mail__line">
 							<div class="mail__input">
-								<input data-required="email" autocomplete="off" type="text" name="form[]"
-									data-error="błąd" placeholder="dodaj swój adres e-mail" class="input">
+								<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="błąd" placeholder="dodaj swój adres e-mail" class="input">
 								<button type="submit" class="mail__button">zapisać się</button>
 							</div>
 							<!-- <span class="mail__inner">dodaj swój adres e-mail</span> -->
@@ -571,93 +421,78 @@
 							<button type="button" class="popup__clear">clear</button>
 						</div>
 						<div data-spollers class="spollers__item ">
-							<button type="button" data-spoller
-								class="spollers__title _icon-arrow _spoller-active">Artyści</button>
+							<button type="button" data-spoller class="spollers__title _icon-arrow _spoller-active">Artyści</button>
 							<div class="spollers__body">
 								<div class="checkbox">
-									<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox"
-										value="1" name="form[]">
+									<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_9" class="checkbox__label"><span class="checkbox__text span">Yulii
 											Stratovich</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox"
-										value="1" name="form[]">
+									<input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_10" class="checkbox__label"><span class="checkbox__text span">Yulii
 											Stratovich</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox"
-										value="1" name="form[]">
+									<input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_11" class="checkbox__label"><span class="checkbox__text span">Yulii
 											Stratovich</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_12" data-error="Ошибка" class="checkbox__input" type="checkbox"
-										value="1" name="form[]">
+									<input id="c_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_12" class="checkbox__label"><span class="checkbox__text span">Yulii
 											Stratovich</span></label>
 								</div>
 							</div>
 						</div>
 						<div data-spollers class="spollers__item">
-							<button type="button" data-spoller
-								class="spollers__title _icon-arrow _spoller-active">Styl</button>
+							<button type="button" data-spoller class="spollers__title _icon-arrow _spoller-active">Styl</button>
 							<div class="spollers__body">
 								<div class="checkbox">
-									<input id="c_13" data-error="Ошибка" class="checkbox__input" type="checkbox"
-										value="1" name="form[]">
+									<input id="c_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_13" class="checkbox__label"><span class="checkbox__text span">Yulii
 											Stratovich</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_14" data-error="Ошибка" class="checkbox__input" type="checkbox"
-										value="1" name="form[]">
+									<input id="c_14" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_14" class="checkbox__label"><span class="checkbox__text span">Yulii
 											Stratovich</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_15" data-error="Ошибка" class="checkbox__input" type="checkbox"
-										value="1" name="form[]">
+									<input id="c_15" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_15" class="checkbox__label"><span class="checkbox__text span">Yulii
 											Stratovich</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_16" data-error="Ошибка" class="checkbox__input" type="checkbox"
-										value="1" name="form[]">
+									<input id="c_16" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_16" class="checkbox__label"><span class="checkbox__text span">Yulii
 											Stratovich</span></label>
 								</div>
 							</div>
 						</div>
 						<div data-spollers class="spollers__item">
-							<button type="button" data-spoller
-								class="spollers__title _icon-arrow _spoller-active">Cena</button>
+							<button type="button" data-spoller class="spollers__title _icon-arrow _spoller-active">Cena</button>
 							<div class="spollers__body">
 								<div class="options">
 									<div class="options__item">
-										<input hidden id="o_5" class="options__input" checked type="radio" value="1"
-											name="option">
+										<input hidden id="o_5" class="options__input" checked type="radio" value="1" name="option">
 										<label for="o_5" class="options__label"><span class="options__text span">over 50
 												000 zł</span></label>
 									</div>
 									<div class="options__item">
-										<input hidden id="o_6" class="options__input" type="radio" value="2"
-											name="option">
+										<input hidden id="o_6" class="options__input" type="radio" value="2" name="option">
 										<label for="o_6" class="options__label"><span class="options__text span">25
 												000 -
 												50 000 zł</span></label>
 									</div>
 									<div class="options__item">
-										<input hidden id="o_7" class="options__input" checked type="radio" value="1"
-											name="option">
+										<input hidden id="o_7" class="options__input" checked type="radio" value="1" name="option">
 										<label for="o_7" class="options__label"><span class="options__text span">10
 												000 -
 												25 000 zł</span></label>
 									</div>
 									<div class="options__item">
-										<input hidden id="o_8" class="options__input" type="radio" value="2"
-											name="option">
+										<input hidden id="o_8" class="options__input" type="radio" value="2" name="option">
 										<label for="o_8" class="options__label"><span class="options__text span">1
 												000 -
 												5 000 zł</span></label>
@@ -766,7 +601,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220427191043"></script>
+	<script src="js/app.min.js?_v=20220430135555"></script>
 </body>
 
 </html>
